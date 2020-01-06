@@ -73,8 +73,6 @@ public class Menu extends javax.swing.JFrame {
                 "Code Client", "Nom", "Prenom", "Date de naissance", "Email"
             }
         ));
-        jTable1.setCellSelectionEnabled(true);
-        
         jScrollPane1.setViewportView(jTable1);
 
         javax.swing.GroupLayout jPanelUserLayout = new javax.swing.GroupLayout(jPanelUser);

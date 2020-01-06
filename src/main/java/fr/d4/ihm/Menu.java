@@ -301,11 +301,15 @@ public class Menu extends javax.swing.JFrame {
     }// </editor-fold>                        
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
+        CreationAgence ca = new CreationAgence();
+        ca.setVisible(true);
+        setEnabled(false);
     }                                        
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {                                         
-        // TODO add your handling code here:
+        CreationClient cc = new CreationClient();
+        cc.setVisible(true);
+        setEnabled(false);
     }                                        
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         

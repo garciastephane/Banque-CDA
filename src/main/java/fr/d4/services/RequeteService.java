@@ -3,7 +3,6 @@ package fr.d4.services;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Statement;
 import java.util.ArrayList;
 
 public class RequeteService {
@@ -11,11 +10,9 @@ public class RequeteService {
 	public ArrayList<String> requetelogin() {
 		ArrayList<String> longins = new ArrayList<String>();
 		Requete r = new Requete();
-		String strQuery= "SELECT idpersonne FROM personne WHERE idpersonne LIKE 'CO%%%%'";
-		Statement stServices;
 		try {
-			stServices = r.getConn().createStatement();
-			ResultSet rsServices= stServices.executeQuery(strQuery);
+			PreparedStatement ps = r.getConn().prepareStatement("SELECT idpersonne FROM personne WHERE idpersonne LIKE 'CO%%%%'");
+			ResultSet rsServices= ps.executeQuery();
 			while(rsServices.next()) { 
 				longins.add(rsServices.getString("idpersonne"));
 			}

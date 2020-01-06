@@ -58,11 +58,14 @@ public class Authentification extends javax.swing.JFrame {
 		jLabel1.setForeground(new java.awt.Color(255, 255, 255));
 		jLabel2.setText("mot de passe");
 		jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-
 		jLabel3.setForeground(new java.awt.Color(200, 0, 0));
 
 		jPasswordField1.setBackground(new java.awt.Color(22, 160, 133));
+		jPasswordField1.setForeground(new java.awt.Color(255, 255, 255));
+		
 		jTextField1.setBackground(new java.awt.Color(22, 160, 133));
+		jTextField1.setForeground(new java.awt.Color(255, 255, 255));
+		
 		jLabel3.setText("login ou mot de passe invalide ");
 		jLabel3.setToolTipText("");
 		jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));

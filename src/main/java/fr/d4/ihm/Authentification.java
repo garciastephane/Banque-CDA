@@ -45,17 +45,24 @@ public class Authentification extends javax.swing.JFrame {
         });
 
         jButton1.setText("OK");
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setBackground(new java.awt.Color(34, 167, 240));
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
+        jPanel1.setBackground(new java.awt.Color(51, 110, 123));
         jLabel1.setText("login");
-
+        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("mot de passe");
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
 
         jLabel3.setForeground(new java.awt.Color(200, 0, 0));
+        
+        jPasswordField1.setBackground(new java.awt.Color(22, 160, 133));
+        jTextField1.setBackground(new java.awt.Color(22, 160, 133));
         jLabel3.setText("login ou mot de passe invalide ");
         jLabel3.setToolTipText("");
         jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));

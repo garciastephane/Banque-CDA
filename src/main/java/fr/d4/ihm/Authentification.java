@@ -1,7 +1,6 @@
 package fr.d4.ihm;
 
 import fr.d4.control.AuthentificationControl;
-import fr.d4.services.Menu;
 
 public class Authentification extends javax.swing.JFrame {
 

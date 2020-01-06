@@ -1,4 +1,4 @@
-package fr.d4.services;
+package fr.d4.ihm;
 
 public class Menu extends javax.swing.JFrame {
 
@@ -300,6 +300,7 @@ public class Menu extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>                        
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         

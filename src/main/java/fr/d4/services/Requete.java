@@ -20,7 +20,7 @@ public class Requete {
 		String url = "jdbc:postgresql://localhost:5432/LCR";
 		Properties props = new Properties();
 		props.setProperty("user", "postgres");
-		props.setProperty("password", "oui");
+		props.setProperty("password", "poche");
 		try {
 			conn = DriverManager.getConnection(url, props);
 		} catch (

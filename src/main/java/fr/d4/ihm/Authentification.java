@@ -1,6 +1,7 @@
 package fr.d4.ihm;
 
 import fr.d4.control.AuthentificationControl;
+import fr.d4.dto.ClientDto;
 
 public class Authentification extends javax.swing.JFrame {
 
@@ -129,8 +130,10 @@ public class Authentification extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         AuthentificationControl ac = new AuthentificationControl();
+        ClientDto cd = new ClientDto();
         if (ac.Valide(jTextField1.getText(),String.valueOf(jPasswordField1.getPassword()))) {
-        	Menu m = new Menu();
+        	Object[][] data = cd.requeteClient();
+        	Menu m = new Menu(data);
         	m.setVisible(true);
 			setVisible(false);
 		}else {

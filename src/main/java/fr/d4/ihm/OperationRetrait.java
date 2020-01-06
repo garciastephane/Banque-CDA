@@ -5,8 +5,10 @@ import javax.swing.JFrame;
 public class OperationRetrait extends javax.swing.JFrame {
 
 	
+	
+
 	    /**
-	     * Creates new form RegisterForm
+	     * Creates new form OperationRetrait
 	     */
 	    public OperationRetrait() {
 	        initComponents();
@@ -32,8 +34,6 @@ public class OperationRetrait extends javax.swing.JFrame {
 	        jButtonRegister = new javax.swing.JButton();
 	        jLabel6 = new javax.swing.JLabel();
 	        jTextField1 = new javax.swing.JTextField();
-	        jLabel7 = new javax.swing.JLabel();
-	        jTextField3 = new javax.swing.JTextField();
 
 	        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
 	        jPanel3.setLayout(jPanel3Layout);
@@ -135,31 +135,21 @@ public class OperationRetrait extends javax.swing.JFrame {
 	        jTextField1.setBackground(new java.awt.Color(22, 160, 133));
 	        jTextField1.setForeground(new java.awt.Color(255, 255, 255));
 
-	        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-	        jLabel7.setForeground(new java.awt.Color(236, 240, 241));
-	        jLabel7.setText("Compte à débiter :");
-
-	        jTextField3.setBackground(new java.awt.Color(22, 160, 133));
-	        jTextField3.setForeground(new java.awt.Color(255, 255, 255));
-
 	        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
 	        jPanel2.setLayout(jPanel2Layout);
 	        jPanel2Layout.setHorizontalGroup(
 	            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
 	            .addGroup(jPanel2Layout.createSequentialGroup()
 	                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-	                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-	                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
-	                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))
-	                .addGap(26, 26, 26)
+	                .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE)
+	                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
 	                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
 	                    .addGroup(jPanel2Layout.createSequentialGroup()
 	                        .addComponent(jButton2)
 	                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
 	                        .addComponent(jButtonRegister))
-	                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE)
 	                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 251, javax.swing.GroupLayout.PREFERRED_SIZE))
-	                .addGap(67, 67, 67))
+	                .addGap(89, 89, 89))
 	            .addGroup(jPanel2Layout.createSequentialGroup()
 	                .addGap(118, 118, 118)
 	                .addComponent(jLabel2)
@@ -169,20 +159,17 @@ public class OperationRetrait extends javax.swing.JFrame {
 	            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
 	            .addGroup(jPanel2Layout.createSequentialGroup()
 	                .addGap(49, 49, 49)
-	                .addComponent(jLabel2)
-	                .addGap(49, 49, 49)
+	                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+	                    .addGroup(jPanel2Layout.createSequentialGroup()
+	                        .addComponent(jLabel2)
+	                        .addGap(73, 73, 73)
+	                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
+	                    .addComponent(jLabel6))
+	                .addGap(53, 53, 53)
 	                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-	                    .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-	                    .addComponent(jLabel7))
-	                .addGap(36, 36, 36)
-	                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-	                    .addComponent(jLabel6)
-	                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
-	                .addGap(26, 26, 26)
-	                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-	                    .addComponent(jButtonRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-	                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-	                .addContainerGap(87, Short.MAX_VALUE))
+	                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+	                    .addComponent(jButtonRegister, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+	                .addContainerGap(103, Short.MAX_VALUE))
 	        );
 
 	        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -262,13 +249,12 @@ public class OperationRetrait extends javax.swing.JFrame {
 	    private javax.swing.JLabel jLabel1;
 	    private javax.swing.JLabel jLabel2;
 	    private javax.swing.JLabel jLabel6;
-	    private javax.swing.JLabel jLabel7;
 	    private javax.swing.JLabel jLabelClose;
 	    private javax.swing.JLabel jLabelMn;
 	    private javax.swing.JPanel jPanel1;
 	    private javax.swing.JPanel jPanel2;
 	    private javax.swing.JPanel jPanel3;
 	    private javax.swing.JTextField jTextField1;
-	    private javax.swing.JTextField jTextField3;
 	    // End of variables declaration                   
 	}
+

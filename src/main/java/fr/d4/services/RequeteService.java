@@ -1,8 +1,10 @@
 package fr.d4.services;
 
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
@@ -13,9 +15,10 @@ public class RequeteService {
 		ArrayList<String> longins = new ArrayList<String>();
 		Requete r = new Requete();
 		try {
-			PreparedStatement ps = r.getConn().prepareStatement("SELECT idpersonne FROM personne WHERE idpersonne LIKE 'CO%%%%'");
-			ResultSet rsServices= ps.executeQuery();
-			while(rsServices.next()) { 
+			PreparedStatement ps = r.getConn()
+					.prepareStatement("SELECT idpersonne FROM personne WHERE idpersonne LIKE 'CO%%%%'");
+			ResultSet rsServices = ps.executeQuery();
+			while (rsServices.next()) {
 				longins.add(rsServices.getString("idpersonne"));
 			}
 			r.getConn().close();
@@ -23,7 +26,7 @@ public class RequeteService {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		return longins;
 	}
 
@@ -32,9 +35,9 @@ public class RequeteService {
 		Requete r = new Requete();
 		try {
 			PreparedStatement ps = r.getConn().prepareStatement("SELECT mdp FROM personne WHERE idpersonne = ?");
-			ps.setString(1,loginValide); 
-			ResultSet rsServices= ps.executeQuery();
-			while(rsServices.next()) { 
+			ps.setString(1, loginValide);
+			ResultSet rsServices = ps.executeQuery();
+			while (rsServices.next()) {
 				mdp = rsServices.getString("mdp");
 			}
 			r.getConn().close();
@@ -42,7 +45,7 @@ public class RequeteService {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		
+
 		return mdp;
 	}
 
@@ -50,10 +53,11 @@ public class RequeteService {
 		ArrayList<Object[]> objList = new ArrayList<Object[]>();
 		Requete r = new Requete();
 		try {
-			PreparedStatement ps = r.getConn().prepareStatement("SELECT idPersonne,nom,prenom,datenaissance,email FROM personne WHERE idpersonne_avoir NOTNULL AND active = true"); 
-			ResultSet rsServices= ps.executeQuery();
-			while(rsServices.next()) { 
-				Object[] obj = new Object[5]; 
+			PreparedStatement ps = r.getConn().prepareStatement(
+					"SELECT idPersonne,nom,prenom,datenaissance,email FROM personne WHERE idpersonne_avoir NOTNULL AND active = true");
+			ResultSet rsServices = ps.executeQuery();
+			while (rsServices.next()) {
+				Object[] obj = new Object[5];
 				obj[0] = new JButton(rsServices.getString("idpersonne"));
 				obj[1] = rsServices.getString("nom");
 				obj[2] = rsServices.getString("prenom");
@@ -66,7 +70,7 @@ public class RequeteService {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		Object[][] objs = new Object[objList.size()][5]; 
+		Object[][] objs = new Object[objList.size()][5];
 		for (int i = 0; i < objs.length; i++) {
 			objs[i] = objList.get(i);
 		}
@@ -77,25 +81,47 @@ public class RequeteService {
 		Requete r = new Requete();
 		try {
 			PreparedStatement ps = r.getConn().prepareStatement("SELECT max(codeagence) FROM agence ");
-			ResultSet rsServices= ps.executeQuery();
+			ResultSet rsServices = ps.executeQuery();
 			String code = null;
-			while(rsServices.next()) { 
+			while (rsServices.next()) {
 				int n = Integer.parseInt(rsServices.getString(1));
-				code = String.format("%03d",n+1);
+				code = String.format("%03d", n + 1);
 			}
 			ps = r.getConn().prepareStatement("INSERT INTO Agence (codeagence, nom, addresse) VALUES(?,?,?)");
-			ps.setString(1,code);
-			ps.setString(2,text);
-			ps.setString(3,text2);
+			ps.setString(1, code);
+			ps.setString(2, text);
+			ps.setString(3, text2);
 			ps.executeUpdate();
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
-		} 
+		}
 	}
 
-	public void insertClient(String text, String text2, String text3, String text4) {
-		
+	public void insertClient(String text, String text2, Date text3, String text4) {
+		Requete r = new Requete();
+		try {
+			PreparedStatement ps = r.getConn()
+					.prepareStatement("SELECT max(idpersonne) FROM personne WHERE idpersonne LIKE '__________'");
+			ResultSet rsServices = ps.executeQuery();
+			String code = null;
+			while (rsServices.next()) {
+				int n = Integer.parseInt(rsServices.getString(1));
+				code = String.format("%010d", n + 1);
+			}
+			ps = r.getConn().prepareStatement(
+					"INSERT INTO personne (idpersonne, nom, prenom , datenaissance, email) VALUES(?,?,?,?,?)");
+			ps.setString(1, code);
+			ps.setString(2, text);
+			ps.setString(3, text2);
+			ps.setDate(4, text3);
+			ps.setString(5, text4);
+			ps.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+
 	}
 
 }

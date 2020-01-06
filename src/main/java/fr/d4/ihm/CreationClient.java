@@ -262,7 +262,7 @@ import fr.d4.dto.ClientDto;
 	    private void jButtonRegisterActionPerformed(java.awt.event.ActionEvent evt) {         
 	    	
 	    	ClientDto ad = new ClientDto();
-	    	ad.insertClient(jTextField1.getText(),jTextField3.getText(),jTextField4.getText(),jTextField8.getText());
+	    	//ad.insertClient(jTextField1.getText(),jTextField3.getText(),jTextField4.getText(),jTextField8.getText());
 	    	ClientDto cd = new ClientDto();
 	    	Object[][] data = cd.requeteClient();
 			Menu m = new Menu(data);

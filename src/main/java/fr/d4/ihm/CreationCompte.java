@@ -27,7 +27,6 @@ public class CreationCompte extends javax.swing.JFrame {
 		jPanel1 = new javax.swing.JPanel();
 		jLabelMn = new javax.swing.JLabel();
 		jLabelClose = new javax.swing.JLabel();
-		jTextField2 = new javax.swing.JTextField();
 		jLabel1 = new javax.swing.JLabel();
 		jPanel2 = new javax.swing.JPanel();
 		jButton2 = new javax.swing.JButton();
@@ -86,8 +85,7 @@ public class CreationCompte extends javax.swing.JFrame {
 												.addComponent(jLabelClose).addGap(18, 18, 18))
 								.addGroup(javax.swing.GroupLayout.Alignment.TRAILING,
 										jPanel1Layout.createSequentialGroup()
-												.addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 382,
-														javax.swing.GroupLayout.PREFERRED_SIZE)
+												
 												.addGap(68, 68, 68)))));
 		jPanel1Layout.setVerticalGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
 				.addGroup(jPanel1Layout.createSequentialGroup().addContainerGap()
@@ -95,8 +93,7 @@ public class CreationCompte extends javax.swing.JFrame {
 								.addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
 										.addComponent(jLabelClose).addComponent(jLabelMn))
 								.addComponent(jLabel1))
-						.addGap(18, 18, 18).addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 10,
-								javax.swing.GroupLayout.PREFERRED_SIZE)
+						.addGap(18, 18, 18)
 						.addContainerGap(27, Short.MAX_VALUE)));
 
 		jPanel2.setBackground(new java.awt.Color(51, 110, 123));

@@ -29,7 +29,6 @@ import fr.d4.dto.ClientDto;
 	        jPanel1 = new javax.swing.JPanel();
 	        jLabelMn = new javax.swing.JLabel();
 	        jLabelClose = new javax.swing.JLabel();
-	        jTextField2 = new javax.swing.JTextField();
 	        jLabel1 = new javax.swing.JLabel();
 	        jPanel2 = new javax.swing.JPanel();
 	        jLabel4 = new javax.swing.JLabel();
@@ -84,7 +83,7 @@ import fr.d4.dto.ClientDto;
 	                        .addComponent(jLabelClose)
 	                        .addGap(18, 18, 18))
 	                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-	                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+	                        
 	                        .addGap(68, 68, 68))))
 	        );
 	        jPanel1Layout.setVerticalGroup(
@@ -97,7 +96,7 @@ import fr.d4.dto.ClientDto;
 	                        .addComponent(jLabelMn))
 	                    .addComponent(jLabel1))
 	                .addGap(18, 18, 18)
-	                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+	                
 	                .addContainerGap(27, Short.MAX_VALUE))
 	        );
 
@@ -296,7 +295,7 @@ import fr.d4.dto.ClientDto;
 	    private javax.swing.JScrollPane jScrollPane1;
 	    private javax.swing.JTextArea jTextArea1;
 	    private javax.swing.JTextField jTextField1;
-	    private javax.swing.JTextField jTextField2;
+	   
 	    // End of variables declaration                   
 	}
 

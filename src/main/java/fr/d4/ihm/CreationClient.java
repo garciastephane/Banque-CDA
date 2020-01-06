@@ -30,7 +30,6 @@ import fr.d4.dto.ClientDto;
 	        jPanel1 = new javax.swing.JPanel();
 	        jLabelMn = new javax.swing.JLabel();
 	        jLabelClose = new javax.swing.JLabel();
-	        jTextField2 = new javax.swing.JTextField();
 	        jLabel1 = new javax.swing.JLabel();
 	        jPanel2 = new javax.swing.JPanel();
 	        jLabel4 = new javax.swing.JLabel();
@@ -87,7 +86,7 @@ import fr.d4.dto.ClientDto;
 	                .addGap(18, 18, 18))
 	            .addGroup(jPanel1Layout.createSequentialGroup()
 	                .addGap(61, 61, 61)
-	                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 309, javax.swing.GroupLayout.PREFERRED_SIZE)
+	                
 	                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
 	        );
 	        jPanel1Layout.setVerticalGroup(
@@ -103,7 +102,7 @@ import fr.d4.dto.ClientDto;
 	                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
 	                        .addComponent(jLabel1)
 	                        .addGap(18, 18, 18)))
-	                .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+	                
 	                .addContainerGap(27, Short.MAX_VALUE))
 	        );
 
@@ -329,7 +328,6 @@ import fr.d4.dto.ClientDto;
 	    private javax.swing.JPanel jPanel1;
 	    private javax.swing.JPanel jPanel2;
 	    private javax.swing.JTextField jTextField1;
-	    private javax.swing.JTextField jTextField2;
 	    private javax.swing.JTextField jTextField3;
 	    private javax.swing.JTextField jTextField4;
 	    private javax.swing.JTextField jTextField8;

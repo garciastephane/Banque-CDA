@@ -50,25 +50,25 @@ public class CreationCompte extends javax.swing.JFrame {
 
             jPanel1.setBackground(new java.awt.Color(242, 120, 75));
 
-            jLabelMn.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-            jLabelMn.setForeground(new java.awt.Color(255, 255, 255));
-            jLabelMn.setText("-");
-            jLabelMn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-            jLabelMn.addMouseListener(new java.awt.event.MouseAdapter() {
-                public void mouseClicked(java.awt.event.MouseEvent evt) {
-                    jLabelMnMouseClicked(evt);
-                }
-            });
+//            jLabelMn.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+//            jLabelMn.setForeground(new java.awt.Color(255, 255, 255));
+//            jLabelMn.setText("-");
+//            jLabelMn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+//            jLabelMn.addMouseListener(new java.awt.event.MouseAdapter() {
+//                public void mouseClicked(java.awt.event.MouseEvent evt) {
+//                    jLabelMnMouseClicked(evt);
+//                }
+//            });
 
-            jLabelClose.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
-            jLabelClose.setForeground(new java.awt.Color(255, 255, 255));
-            jLabelClose.setText("X");
-            jLabelClose.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-            jLabelClose.addMouseListener(new java.awt.event.MouseAdapter() {
-                public void mouseClicked(java.awt.event.MouseEvent evt) {
-                    jLabelCloseMouseClicked(evt);
-                }
-            });
+//            jLabelClose.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+//            jLabelClose.setForeground(new java.awt.Color(255, 255, 255));
+//            jLabelClose.setText("X");
+//            jLabelClose.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+//            jLabelClose.addMouseListener(new java.awt.event.MouseAdapter() {
+//                public void mouseClicked(java.awt.event.MouseEvent evt) {
+//                    jLabelCloseMouseClicked(evt);
+//                }
+//            });
 
             jLabel1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
             jLabel1.setText("LCR");

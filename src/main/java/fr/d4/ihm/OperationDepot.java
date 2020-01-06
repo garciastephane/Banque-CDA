@@ -190,6 +190,7 @@ package fr.d4.ihm;
 		        );
 
 		        pack();
+		        setLocationRelativeTo(null);
 		    }// </editor-fold>                        
 
 		   

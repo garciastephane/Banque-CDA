@@ -190,6 +190,7 @@ public class OperationRetrait extends javax.swing.JFrame {
 	        );
 
 	        pack();
+	        setLocationRelativeTo(null);
 	    }// </editor-fold>                        
 
 	    private void jButtonRegisterActionPerformed(java.awt.event.ActionEvent evt) {                                                
@@ -226,6 +227,7 @@ public class OperationRetrait extends javax.swing.JFrame {
 	            java.util.logging.Logger.getLogger(OperationRetrait.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
 	        }
 	        //</editor-fold>
+	       
 
 	        /* Create and display the form */
 	        java.awt.EventQueue.invokeLater(new Runnable() {

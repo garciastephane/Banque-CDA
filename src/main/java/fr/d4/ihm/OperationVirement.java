@@ -198,6 +198,7 @@ public class OperationVirement extends javax.swing.JFrame {
 								javax.swing.GroupLayout.PREFERRED_SIZE)));
 
 		pack();
+		 setLocationRelativeTo(null);
 	}// </editor-fold>
 
 

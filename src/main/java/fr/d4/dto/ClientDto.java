@@ -8,4 +8,9 @@ public class ClientDto {
 		Object[][] data = rs.requeteClient();
 		return data;
 	}
+
+	public void insertClient(String text, String text2, String text3, String text4) {
+		RequeteService rs = new RequeteService();
+		rs.insertClient(text, text2,  text3,  text4) ;;	
+	}
 }

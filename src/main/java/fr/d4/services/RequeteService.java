@@ -94,4 +94,8 @@ public class RequeteService {
 		} 
 	}
 
+	public void insertClient(String text, String text2, String text3, String text4) {
+		
+	}
+
 }

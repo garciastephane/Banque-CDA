@@ -5,6 +5,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import javax.swing.JButton;
+
 public class RequeteService {
 
 	public ArrayList<String> requetelogin() {
@@ -52,7 +54,7 @@ public class RequeteService {
 			ResultSet rsServices= ps.executeQuery();
 			while(rsServices.next()) { 
 				Object[] obj = new Object[5]; 
-				obj[0] = rsServices.getString("idpersonne");
+				obj[0] = new JButton(rsServices.getString("idpersonne"));
 				obj[1] = rsServices.getString("nom");
 				obj[2] = rsServices.getString("prenom");
 				obj[3] = rsServices.getString("datenaissance");
@@ -69,6 +71,27 @@ public class RequeteService {
 			objs[i] = objList.get(i);
 		}
 		return objs;
+	}
+
+	public void insertAgence(String text, String text2) {
+		Requete r = new Requete();
+		try {
+			PreparedStatement ps = r.getConn().prepareStatement("SELECT max(codeagence) FROM agence ");
+			ResultSet rsServices= ps.executeQuery();
+			String code = null;
+			while(rsServices.next()) { 
+				int n = Integer.parseInt(rsServices.getString(1));
+				code = String.format("%03d",n+1);
+			}
+			ps = r.getConn().prepareStatement("INSERT INTO Agence (codeagence, nom, addresse) VALUES(?,?,?)");
+			ps.setString(1,code);
+			ps.setString(2,text);
+			ps.setString(3,text2);
+			ps.executeUpdate();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} 
 	}
 
 }

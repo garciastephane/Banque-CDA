@@ -303,13 +303,13 @@ public class Menu extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         CreationAgence ca = new CreationAgence();
         ca.setVisible(true);
-        setEnabled(false);
+        setVisible(false);
     }                                        
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {                                         
         CreationClient cc = new CreationClient();
         cc.setVisible(true);
-        setEnabled(false);
+        setVisible(false);
     }                                        
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                         

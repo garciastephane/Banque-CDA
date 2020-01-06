@@ -2,8 +2,7 @@ package fr.d4.ihm;
 
 
 
-	
-	import javax.swing.JFrame;
+import fr.d4.dto.ClientDto;
 
 	
 
@@ -122,7 +121,18 @@ package fr.d4.ihm;
 	        jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
 	        jButton2.setForeground(new java.awt.Color(255, 255, 255));
 	        jButton2.setText("Cancel");
-
+	        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+	            public void mouseClicked(java.awt.event.MouseEvent evt) {
+	                jButtonRegisterMouseClicked(evt);
+	            }
+	        });
+	        jButton2.addActionListener(new java.awt.event.ActionListener() {
+	            public void actionPerformed(java.awt.event.ActionEvent evt) {
+	                jButton2ActionPerformed(evt);
+	            }
+	        });
+	        
+	        
 	        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
 	        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
 	        jLabel2.setText("Création Client");
@@ -249,21 +259,23 @@ package fr.d4.ihm;
 	        pack();
 	        setLocationRelativeTo(null);
 	    }// </editor-fold>                        
-
-	    private void jLabelMnMouseClicked(java.awt.event.MouseEvent evt) {                                      
-
-	        this.setState(JFrame.ICONIFIED);
-	    }                                     
-
-	    private void jLabelCloseMouseClicked(java.awt.event.MouseEvent evt) {                                         
-
-	        System.exit(0);
-	    }                                        
-
+                                   
 	    private void jButtonRegisterActionPerformed(java.awt.event.ActionEvent evt) {                                                
-
+	    	ClientDto cd = new ClientDto();
+	    	Object[][] data = cd.requeteClient();
+			Menu m = new Menu(data);
+			m.setVisible(true);
+			setVisible(false);
 	    }                                               
 
+	    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {                                                
+	    	ClientDto cd = new ClientDto();
+	    	Object[][] data = cd.requeteClient();
+			Menu m = new Menu(data);
+			m.setVisible(true);
+			setVisible(false);
+	    }    
+	    
 	    private void jButtonRegisterMouseClicked(java.awt.event.MouseEvent evt) {                                             
 	        // TODO add your handling code here:
 	    }                                            

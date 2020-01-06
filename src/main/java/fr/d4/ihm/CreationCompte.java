@@ -136,6 +136,7 @@ public class CreationCompte extends javax.swing.JFrame {
             jLabel6.setText("Voulez vous créer :");
 
             jComboBox2.setBackground(new java.awt.Color(22, 160, 133));
+            jComboBox2.setForeground(new java.awt.Color(255, 255, 255));
             jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Compte Courant", "Livret A", "Plan Epargne Logement" }));
             jComboBox2.addActionListener(new java.awt.event.ActionListener() {
                 public void actionPerformed(java.awt.event.ActionEvent evt) {
